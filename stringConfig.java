@@ -14,17 +14,22 @@ public class StringConfig {
 		// Tratando exceções para receber somente letras:
 		
 		do {
-			System.out.println("Digite apenas letras, frases ou números : ");
+			System.out.println("Digite apenas números : ");
 			testString = sc.nextLine();
 
 		// Criando regra de negócio
-		} while (!testString.matches ("[a-zA-Z- ]+"));
+		} while (!testString.matches ("[0-9 ]+"));
 		String[] vect = testString.split(" ");
 	
+		int countNumber= 1;
 		
-		System.out.println(vect[0]);
-		System.out.println(vect[1]);
-		System.out.println(vect[2]);
+		for (String item : vect) {
+			
+			System.out.println("Saída de número " + countNumber + "º é igual a: " + item);
+			countNumber ++;
+		}
+		
+		System.out.println(countNumber);
 		
 		
 	}
